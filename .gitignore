@@ -1,0 +1,4 @@
+*.o
+*.so
+simulation
+simulation_debug
