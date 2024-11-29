@@ -6,37 +6,93 @@ A comprehensive simulation framework for analyzing the evolution of WiFi protoco
 
 ```
 wifi-simulator/
-├── bin/                # Binary executables
-│   ├── wifi4_sim      # WiFi 4 simulation executable
-│   ├── wifi5_sim      # WiFi 5 simulation executable
-│   └── wifi6_sim      # WiFi 6 simulation executable
-├── build/             # Build artifacts
-│   ├── wifi4/         # WiFi 4 object files
-│   ├── wifi5/         # WiFi 5 object files
-│   └── wifi6/         # WiFi 6 object files
-├── include/           # Header files
-│   ├── wifi4/         # WiFi 4 headers
-│   │   ├── channel.h
-│   │   ├── packet.h
-│   │   ├── user.h
-│   │   └── access_point.h
-│   ├── wifi5/         # WiFi 5 headers
-│   │   ├── mimo_channel.h
-│   │   ├── packet.h
-│   │   ├── user.h
-│   │   └── access_point.h
-│   └── wifi6/         # WiFi 6 headers
-│       ├── ofdma_channel.h
-│       ├── packet.h
-│       ├── user.h
-│       └── access_point.h
-├── lib/               # External libraries
-├── src/               # Source files
-│   ├── wifi4/         # WiFi 4 implementation
-│   ├── wifi5/         # WiFi 5 implementation
-│   └── wifi6/         # WiFi 6 implementation
-├── Makefile           # Build configuration
-└── setup.sh           # Environment setup script
+.
+├── Readme.md
+├── wifi4
+│   ├── setup.sh
+│   └── wifi4_simulation
+│       ├── bin
+│       │   ├── simulation
+│       │   └── simulation_debug
+│       ├── build
+│       │   ├── AccessPoint.o
+│       │   ├── AccessPoint_shared.o
+│       │   ├── FrequencyChannel.o
+│       │   ├── FrequencyChannel_shared.o
+│       │   ├── main.o
+│       │   ├── main_shared.o
+│       │   ├── Packet.o
+│       │   ├── Packet_shared.o
+│       │   ├── User.o
+│       │   └── User_shared.o
+│       ├── include
+│       │   ├── AccessPoint.h
+│       │   ├── FrequencyChannel.h
+│       │   ├── Packet.h
+│       │   └── User.h
+│       ├── lib
+│       │   └── libsimulation.so
+│       ├── Makefile
+│       └── src
+│           ├── AccessPoint.cpp
+│           ├── FrequencyChannel.cpp
+│           ├── main.cpp
+│           ├── Packet.cpp
+│           └── User.cpp
+├── wifi5
+│   ├── setup.sh
+│   └── wifi5_simulation
+│       ├── bin
+│       ├── build
+│       ├── include
+│       │   ├── AccessPoint.h
+│       │   ├── Constants.h
+│       │   ├── FrequencyChannel.h
+│       │   ├── Packet.h
+│       │   └── User.h
+│       ├── lib
+│       ├── Makefile
+│       └── src
+│           ├── AccessPoint.cpp
+│           ├── FrequencyChannel.cpp
+│           ├── main.cpp
+│           ├── Packet.cpp
+│           └── User.cpp
+└── wifi6
+    ├── setup.sh
+    └── wifi6_simulation
+        ├── bin
+        │   ├── simulation
+        │   └── simulation_debug
+        ├── build
+        │   ├── AccessPoint.o
+        │   ├── AccessPoint_shared.o
+        │   ├── Constants.o
+        │   ├── Constants_shared.o
+        │   ├── FrequencyChannel.o
+        │   ├── FrequencyChannel_shared.o
+        │   ├── main.o
+        │   ├── main_shared.o
+        │   ├── Packet.o
+        │   ├── Packet_shared.o
+        │   ├── User.o
+        │   └── User_shared.o
+        ├── include
+        │   ├── AccessPoint.h
+        │   ├── Constants.h
+        │   ├── FrequencyChannel.h
+        │   ├── Packet.h
+        │   └── User.h
+        ├── lib
+        │   └── libsimulation.so
+        ├── Makefile
+        └── src
+            ├── AccessPoint.cpp
+            ├── Constants.cpp
+            ├── FrequencyChannel.cpp
+            ├── main.cpp
+            ├── Packet.cpp
+            └── User.cpp
 ```
 
 ## 🌟 Features
